@@ -6,6 +6,13 @@ const COLORS = {
 
 };
 
+const MARKS = {
+    "-1": 'X',
+    "1": 'O',
+    "0": ''
+
+};
+
 
 /*----- state variables -----*/
 let board //3 x 3 array
@@ -88,6 +95,7 @@ function renderBoard() {
             const cellId = `${colIdx},${rowIdx}`;
             const cellEl = document.getElementById(cellId);
             cellEl.style.backgroundColor = COLORS[cellVal];
+            cellEl.innerText = MARKS[cellVal];
         })
     })
 }
